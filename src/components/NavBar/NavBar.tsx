@@ -58,12 +58,15 @@ export const NavBar = () => {
 
           {user ? (
             <div className="flex items-center gap-3 border-l border-gray-200 pl-4">
-              <div className="text-right">
+              
+              <Link to="/profile" className="text-right rounded-lg px-2 py-1 hover:bg-gray-100 transition-colors">
                 <p className="text-sm font-medium text-gray-800">
                   {user.nombre} {user.apellido}
                 </p>
-                <p className="text-xs text-gray-400">Cliente</p>
-              </div>
+                <p className="text-xs text-gray-400">
+                  {user.roles.map((role) => role.rol_codigo).join(", ")}
+                </p>
+              </Link>
 
               <button
                 onClick={handleLogout}
