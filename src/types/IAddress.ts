@@ -12,6 +12,11 @@ export interface IAddress {
   es_principal: boolean;
 }
 
+export interface AddressListResponse {
+  data: IAddress[];
+  total: number;
+}
+
 export type AddressPayload = {
   alias: string;
   linea1: string;

@@ -1,8 +1,8 @@
 import { api } from "./api";
-import type { AddressPayload, IAddress } from "../types/IAddress";
+import type { AddressPayload, IAddress, AddressListResponse } from "../types/IAddress";
 
-export const getAddresses = async (): Promise<IAddress[]> => {
-  const response = await api.get<IAddress[]>("/api/v1/direcciones/");
+export const getAddresses = async (): Promise<AddressListResponse> => {
+  const response = await api.get<AddressListResponse>("/api/v1/direcciones/");
   return response.data;
 };
 

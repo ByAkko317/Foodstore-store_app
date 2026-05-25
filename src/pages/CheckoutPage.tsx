@@ -4,7 +4,7 @@ import { useMutation, useQuery, useQueryClient } from "@tanstack/react-query";
 import { Link, useNavigate } from "react-router-dom";
 import { createAddress, getAddresses } from "../api/addresses.service";
 import { createOrder } from "../api/orders.service";
-import type { AddressPayload, IAddress } from "../types/IAddress";
+import type { AddressPayload, IAddress, AddressListResponse } from "../types/IAddress";
 import type { PaymentMethod } from "../types/IOrder";
 import { useCartStore } from "../store/cart.store";
 import { useAuthStore } from "../store/auth.store";
@@ -25,15 +25,15 @@ export const CheckoutPage = () => {
   const [error, setError] = useState("");
 
   const {
-    data: addresses = [],
+    data: addressesResponse,
     isLoading: isLoadingAddresses,
     isError: isErrorAddresses,
-  } = useQuery<IAddress[]>({
+  } = useQuery<AddressListResponse>({    
     queryKey: ["addresses"],
     queryFn: getAddresses,
     enabled: isAuthenticated,
   });
-
+  const addresses = addressesResponse?.data ?? [];
   const createAddressMutation = useMutation({
     mutationFn: createAddress,
     onSuccess: (newAddress) => {

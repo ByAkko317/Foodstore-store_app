@@ -6,6 +6,7 @@ const navLinks = [
   { label: "Productos", href: "/" },
   { label: "Carrito", href: "/cart" },
   { label: "Mis pedidos", href: "/orders" },
+  { label: "Mis direcciones", href: "/addresses" },
 ];
 
 export const NavBar = () => {
