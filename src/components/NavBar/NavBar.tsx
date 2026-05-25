@@ -29,8 +29,8 @@ export const NavBar = () => {
           to="/"
           className="flex items-center gap-2 text-gray-900 font-bold text-lg hover:opacity-80 transition-opacity"
         >
-          <span className="text-2xl">🍔</span>
-          <span>SMASH BURGERS</span>
+          <span className="text-2xl">🍕🍸</span>
+          <span>RESTO BAR</span>
         </Link>
 
         <div className="flex items-center gap-4">

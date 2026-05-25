@@ -45,7 +45,7 @@ export const LoginPage = () => {
     <div className="min-h-screen flex items-center justify-center bg-gray-100 px-4">
       <div className="w-full max-w-sm bg-white rounded-2xl shadow-sm border border-gray-100 p-6">
         <div className="mb-6 text-center">
-          <div className="text-4xl mb-2">🍔</div>
+          <div className="text-4xl mb-2">🍕🍸</div>
           <h1 className="text-2xl font-bold text-gray-900">Iniciar sesión</h1>
           <p className="text-sm text-gray-500 mt-1">
             Ingresá para finalizar tu pedido

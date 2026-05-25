@@ -458,6 +458,23 @@ export const CheckoutPage = () => {
                 />
                 Mercado Pago
               </label>
+              <label
+              className={`rounded-xl border p-4 cursor-pointer transition-colors ${
+                paymentMethod === "TRANSFERENCIA"
+                ? "border-blue-500 bg-blue-50"
+                : "border-gray-100 hover:bg-gray-50"
+                }`}
+                >
+                  <input
+                  type="radio"
+                  name="payment"
+                  value="TRANSFERENCIA"
+                  checked={paymentMethod === "TRANSFERENCIA"}
+                  onChange={() => setPaymentMethod("TRANSFERENCIA")}
+                  className="mr-2"
+                  />
+                  Transferencia
+              </label>
             </div>
           </section>
         </div>

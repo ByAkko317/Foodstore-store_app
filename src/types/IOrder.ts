@@ -6,7 +6,7 @@ export type OrderStatus =
   | "ENTREGADO"
   | "CANCELADO";
 
-export type PaymentMethod = "EFECTIVO" | "MERCADOPAGO";
+export type PaymentMethod = "EFECTIVO" | "MERCADOPAGO" | "TRANSFERENCIA";
 
 export interface IOrderDetail {
   id: number;
