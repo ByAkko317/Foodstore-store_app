@@ -81,9 +81,9 @@ export const AddressesPage = () => {
       handleCloseDeleteModal();
     },
 
-    onError: (error: Error) => {
+    onError: (error: any) => {
       setDeleteError(
-        error.message || "No se pudo eliminar la dirección."
+        error?.response?.data?.detail || "No se pudo eliminar la dirección."
       );
     },
   });
