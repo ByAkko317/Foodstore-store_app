@@ -1,5 +1,7 @@
 # Store App - Parcial Frontend Parte 2
 
+#### Link video: https://drive.google.com/file/d/1qiGORFaq7LmZp-yl2_4U6FDd1Q13wPVp/view?usp=drive_link
+
 Frontend público para clientes desarrollado con React, TypeScript y Vite.
 
 La aplicación permite ver productos, consultar detalles, armar un carrito, registrarse o iniciar sesión como cliente y realizar pedidos contra el backend.
